@@ -17,7 +17,7 @@ const protect = async (req, res, next) => {
       return res.status(404).json({ message: 'User not found' });
     }
 
-    req.user = user; // ✅ Full user attached
+    req.user = user;  
     next();
   } catch (err) {
     console.error('JWT error:', err.message);
